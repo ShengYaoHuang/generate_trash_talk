@@ -1,0 +1,60 @@
+<form method="POST" action="/">
+  <div class="container">
+    <div class="title">
+      <div class="row justify-content-center m-5">
+        <h3>你想對誰說幹話？</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card col mr-5 border border-danger" style="width: 18rem;">
+        <img class="card-img-top"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" height="280"
+          alt="engineer">
+        <div class="card-body row justify-content-center">
+          <div class="form-check">
+            <input class="form-check-input " type="radio" name="target" id="engineer" value="engineer">
+            <label class="form-check-label" for="engineer">
+              工程師
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="card col border border-warning" style="width: 18rem;">
+        <img class="card-img-top"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" height="280"
+          alt="designer">
+        <div class="card-body row justify-content-center">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="target" id="designer" value="designer">
+            <label class="form-check-label" for="designer">
+              設計師
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="card col ml-5 border border-success" style="width: 18rem;">
+        <img class="card-img-top"
+          src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" height="280"
+          alt="entrepreneur">
+        <div class="card-body row justify-content-center">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="target" id="entrepreneur" value="entrepreneur">
+            <label class="form-check-label" for="entrepreneur">
+              創業家
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="result row mt-5 align-items-center">
+      <div class="button mr-2">
+        <button type="submit" class="btn btn-dark">產生幹話</button>
+      </div>
+      {{#if trashtalk}}
+      <div class="alert alert-primary mb-0" role="alert">
+        {{ trashtalk }}
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</form>
