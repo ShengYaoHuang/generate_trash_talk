@@ -19,9 +19,12 @@ function generaterashTalk(options) {
   let result = ''
   if (options === 'engineer') {
     result += `身為一個${target.engineer}，${sample(task.engineer)}，${sample(phrase)}吧！`
+    checked = true
   } else if (options === 'designer') {
     result += `身為一個${target.designer}，${sample(task.designer)}，${sample(phrase)}吧！`
+    checked = true
   } else if (options === 'entrepreneur') {
+    checked = true
     result += `身為一個${target.entrepreneur}，${sample(task.entrepreneur)}，${sample(phrase)}吧！`
   } else {
     result += '請選擇一個職業來產生幹話吧！'
